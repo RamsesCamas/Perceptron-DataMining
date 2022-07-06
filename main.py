@@ -7,8 +7,9 @@ def extract_data(filename):
     with open(filename,'r',encoding='utf-8') as file:
         lines = file.readlines()
         for line in lines:
+            bias = [1]
             data = line.replace('\n','').split(',')
-            input = data[0:4]
+            input = bias + data[0:4]
             output = data[4]
             input = list(map(float,input))
             inputs.append(input)
@@ -21,7 +22,7 @@ def transform_outputs(output):
 def generate_weights(input):
     initial_weights = []
     for _ in range(len(input)):
-        weight_n = random.uniform(-1,1)
+        weight_n = random.uniform(0,1)
         initial_weights.append(weight_n)
     return initial_weights
 
