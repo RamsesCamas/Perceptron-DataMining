@@ -48,3 +48,9 @@ if __name__ == '__main__':
     final_weights = perceptron.train()
     perceptron_2 = Perceptron(test_data,final_weights)
     perceptron_2.predict(test_data)
+
+    input_1 = float(input('Entrada 1: '))
+    input_2 = float(input('Entrada 2: '))
+    input_3 = float(input('Entrada 3: '))
+    input_4 = float(input('Entrada 4: '))
+    perceptron_2.predict([[1,input_1,input_2,input_3,input_4]])
