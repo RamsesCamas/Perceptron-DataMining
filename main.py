@@ -10,7 +10,7 @@ def extract_data(filename):
             data = line.replace('\n','').split(',')
             input = data[0:4]
             output = data[4]
-            input = list(map(lambda x: float(x)/10,input))
+            input = list(map(float,input))
             inputs.append(input)
             outputs.append(output)
     return inputs, outputs
