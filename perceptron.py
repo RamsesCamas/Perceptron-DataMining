@@ -14,7 +14,7 @@ class Perceptron:
         return y
 
     def step_function(self, y):
-        return 1 if y >= 0 else -1
+        return 1 if y >= self.threshold else -1
 
     def train(self):
         contador = 0
