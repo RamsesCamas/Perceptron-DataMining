@@ -47,7 +47,6 @@ if __name__ == '__main__':
     perceptron = Perceptron(train_input,initial_weights, transformed_outputs,learning_rate)
     final_weights = perceptron.train()
     perceptron_2 = Perceptron(test_data,final_weights)
-    perceptron_2.predict(test_data)
 
     input_1 = float(input('Entrada 1: '))
     input_2 = float(input('Entrada 2: '))
